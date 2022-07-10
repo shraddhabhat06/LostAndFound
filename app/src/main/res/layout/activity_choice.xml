@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D53F3C45"
+    tools:context=".ChoiceActivity">
+
+    <Button
+        android:id="@+id/idBtnLost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_back"
+        android:text="LOST"
+        android:fontFamily="sans-serif-black"
+        android:textSize="35sp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+    <Button
+        android:id="@+id/idBtnFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_back"
+        android:text="FOUND"
+        android:fontFamily="sans-serif-black"
+        android:textSize="35sp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:layout_below="@+id/idBtnLost"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+
+
+</RelativeLayout>
