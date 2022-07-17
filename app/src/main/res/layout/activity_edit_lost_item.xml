@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D53F3C45"
-    tools:context=".EditLostActivity">
+    tools:context=".EditLostItem">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="65dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Item Name"
                 android:padding="5dp"
@@ -129,7 +129,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Possible Location of Lost item  "
+                android:hint="Possible Date (dd/mm/yyy) / Location of Lost item  "
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
@@ -180,19 +180,19 @@
                 android:layout_marginTop="20dp"
                 android:weightSum="2"
                 android:orientation="horizontal">
-            <!--button for adding a new course-->
-            <Button
-                android:id="@+id/idBtnEditLost"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/button_back"
-                android:text="Edit\n Lost Item"
-                android:textAllCaps="false" />
+                <!--button for adding a new course-->
+                <Button
+                    android:id="@+id/idBtnEditLost"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_back"
+                    android:text="Edit\n Lost Item"
+                    android:textAllCaps="false" />
                 <Button
                     android:id="@+id/idBtnDeleteLost"
                     android:layout_width="0dp"
@@ -205,7 +205,7 @@
                     android:background="@drawable/button_back"
                     android:text="Delete\n Lost Item"
                     android:textAllCaps="false" />
-        </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 

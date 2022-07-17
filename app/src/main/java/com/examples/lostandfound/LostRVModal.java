@@ -1,43 +1,39 @@
 package com.examples.lostandfound;
 
-
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class LostRVModal implements Parcelable {
-    //creating variables for our different fields.
-    private String itemName;
-    private String loserName ;
-    private String loserPhone;
-    private String loserEmail ;
-    private String itemLocation;
-    private String itemDesc;
-    private String itemId;
+   private String itemname ;
+   private String losername ;
+   private String loserphone;
+   private String loseremail ;
+   private String itemloc;
+   private String itemdesc ;
+   private String lostitemid ;
 
+   public LostRVModal(){
 
-    public String getItemId() {
-        return itemId;
-    }
-
-    public void setCourseId(String itemId) {
-        this.itemId = itemId;
-    }
-
-
-    //creating an empty constructor.
-    public LostRVModal() {
-
+   }
+    public LostRVModal(String itemname, String losername, String loserphone, String loseremail, String itemloc,
+                       String itemdesc, String lostitemid) {
+        this.itemname = itemname;
+        this.losername = losername;
+        this.loserphone = loserphone;
+        this.loseremail = loseremail;
+        this.itemloc = itemloc;
+        this.itemdesc = itemdesc;
+        this.lostitemid = lostitemid;
     }
 
     protected LostRVModal(Parcel in) {
-        itemName = in.readString();
-        itemId = in.readString();
-        itemDesc = in.readString();
-        itemLocation = in.readString();
-        loserEmail = in.readString();
-        loserName = in.readString();
-        loserPhone = in.readString();
+        itemname = in.readString();
+        losername = in.readString();
+        loserphone = in.readString();
+        loseremail = in.readString();
+        itemloc = in.readString();
+        itemdesc = in.readString();
+        lostitemid = in.readString();
     }
 
     public static final Creator<LostRVModal> CREATOR = new Creator<LostRVModal>() {
@@ -52,64 +48,62 @@ public class LostRVModal implements Parcelable {
         }
     };
 
-    //creating getter and setter methods.
-    public String getItemName() {
-        return itemName;
+    public String getItemname() {
+        return itemname;
     }
 
-    public void setCourseName(String itemName) {
-        this.itemName = itemName;
+    public void setItemname(String itemname) {
+        this.itemname = itemname;
     }
 
-    public String getItemDesc() {
-        return itemDesc;
+    public String getLosername() {
+        return losername;
     }
 
-    public void setItemDesc(String itemDesc) {
-        this.itemDesc = itemDesc;
+    public void setLosername(String losername) {
+        this.losername = losername;
     }
 
-    public String getLoserName() {
-        return loserName;
+    public String getLoserphone() {
+        return loserphone;
     }
 
-    public void setLoserName(String loserName) {
-        this.loserName = loserName;
+    public void setLoserphone(String loserphone) {
+        this.loserphone = loserphone;
     }
 
-    public String getLoserPhone() {
-        return loserPhone;
+    public String getLoseremail() {
+        return loseremail;
     }
 
-    public void setLoserPhone(String loserPhone) {
-        this.loserPhone = loserPhone;
+    public void setLoseremail(String loseremail) {
+        this.loseremail = loseremail;
     }
 
-    public String getLoserEmail() {
-        return loserEmail;
+    public String getItemloc() {
+        return itemloc;
     }
 
-    public void getLoserEmail(String loserEmail) {this.loserEmail = loserEmail;}
-
-    public String getItemLocation() {
-        return itemLocation;
+    public void setItemloc(String itemloc) {
+        this.itemloc = itemloc;
     }
 
-    public void setItemLocation(String courseLink) {
-        this.itemLocation = courseLink;
+    public String getItemdesc() {
+        return itemdesc;
     }
 
-
-    public LostRVModal(String itemId,String itemName,String loserName,String loserPhone,String loserEmail,String itemDesc,String itemLocation) {
-        this.itemId =itemId ;
-        this.itemName=itemName;
-        this.loserName=loserName;
-        this.loserPhone=loserPhone;
-        this.loserEmail=loserEmail;
-        this.itemDesc=itemDesc;
-        this.itemLocation=itemLocation;
-
+    public void setItemdesc(String itemdesc) {
+        this.itemdesc = itemdesc;
     }
+
+    public String getLostitemid() {
+        return lostitemid;
+    }
+
+    public void setLostitemid(String lostitemid) {
+        this.lostitemid = lostitemid;
+    }
+
 
     @Override
     public int describeContents() {
@@ -117,13 +111,13 @@ public class LostRVModal implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(itemName);
-        dest.writeString(itemId);
-        dest.writeString(itemName);
-        dest.writeString(loserName);
-        dest.writeString(loserPhone);
-        dest.writeString(loserEmail);
-        dest.writeString(itemLocation);
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(itemname);
+        parcel.writeString(losername);
+        parcel.writeString(loserphone);
+        parcel.writeString(loseremail);
+        parcel.writeString(itemloc);
+        parcel.writeString(itemdesc);
+        parcel.writeString(lostitemid);
     }
 }

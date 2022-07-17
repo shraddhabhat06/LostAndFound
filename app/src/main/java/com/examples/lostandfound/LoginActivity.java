@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                             //on below line we are opening our mainactivity.
                             Intent i = new Intent(LoginActivity.this, ChoiceActivity.class);
                             startActivity(i);
-                            finish();
+                            //finish();
                         } else {
                             //hiding our progress bar and displaying a toast message.
                             loadingPB.setVisibility(View.GONE);
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    @Override
+    /*@Override
     protected void onStart() {
         super.onStart();
         //in on start method checking if the user is already sign in.
@@ -97,4 +97,5 @@ public class LoginActivity extends AppCompatActivity {
             this.finish();
         }
     }
+}*/
 }
