@@ -14,13 +14,12 @@
         android:background="#C76BD8" >
 
         <TextView
-            android:id="@+id/idIVLostItemName"
+            android:id="@+id/idIVFoundItemName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:padding="5dp"
-            android:text="Lost Item:"
-            android:textColor="@color/black"
+            android:text="Found Item:"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -28,11 +27,10 @@
             android:id="@+id/idIVLostLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idIVLostItemName"
+            android:layout_below="@+id/idIVFoundItemName"
             android:fontFamily="sans-serif-black"
-            android:textColor="@color/black"
             android:padding="5dp"
-            android:text="Possible Location/Date:"
+            android:text="Location/Date:"
             android:textSize="15sp"
             android:textStyle="bold" />
 

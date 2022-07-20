@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,10 +15,12 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,11 +30,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class LostActivity extends AppCompatActivity implements LostRVAdapter.LostItemClickInterface {
+    private FloatingActionButton add_lost_item_btn;
+    private FirebaseAuth mAuth;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
     private RecyclerView lostRV;
     private ProgressBar loadingPB;
-    private FloatingActionButton add_item_btn;
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
     private ArrayList<LostRVModal> lostRVModalArrayList;
     private RelativeLayout bottomSheetRL;
     private LostRVAdapter lostRVAdapter;
@@ -42,19 +46,22 @@ public class LostActivity extends AppCompatActivity implements LostRVAdapter.Los
         setContentView(R.layout.activity_lost);
         lostRV=findViewById(R.id.idRVItems);
         loadingPB =findViewById(R.id.idPBLoading);
-        add_item_btn=findViewById(R.id.idAddItembutton);
+        add_lost_item_btn=findViewById(R.id.idAddItembutton);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference= firebaseDatabase.getReference("Lost_Items");
         lostRVModalArrayList=new ArrayList<>();
-        lostRVAdapter = new LostRVAdapter(lostRVModalArrayList,this,this);
-        lostRV.setLayoutManager(new LinearLayoutManager(this));
-        lostRV.setAdapter(lostRVAdapter);
-        add_item_btn.setOnClickListener(new View.OnClickListener() {
+        bottomSheetRL=findViewById(R.id.idRLBSheet);
+        mAuth = FirebaseAuth.getInstance();
+        add_lost_item_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LostActivity.this,AddLostItem.class));
+                Intent i = new Intent(LostActivity.this, AddLostItem.class);
+                startActivity(i);
             }
         });
+        lostRVAdapter = new LostRVAdapter(lostRVModalArrayList,this,this::onLostItemClick);
+        lostRV.setLayoutManager(new LinearLayoutManager(this));
+        lostRV.setAdapter(lostRVAdapter);
         getAllLostItems();
 
     }
@@ -115,21 +122,20 @@ public class LostActivity extends AppCompatActivity implements LostRVAdapter.Los
         TextView loseremailTV= layout.findViewById(R.id.idTVLoserEmail);
         TextView lostitemlocTV= layout.findViewById(R.id.idTVItemLoc);
         TextView lostitemdescTV= layout.findViewById(R.id.idTVItemDesc);
-        Button editlostitem=layout.findViewById(R.id.idBtnEditLostItem);
+        Button dellostitem=layout.findViewById(R.id.idBtnDelLostItem);
         Button losercontact=layout.findViewById(R.id.idBtnEmail);
 
-        lostitemnameTV.setText(lostRVModal.getItemname());
-        losernameTV.setText(lostRVModal.getLosername());
-        loserphoneTV.setText(lostRVModal.getLoserphone());
-        loseremailTV.setText(lostRVModal.getLoseremail());
-        lostitemlocTV.setText(lostRVModal.getItemloc());
-        lostitemdescTV.setText(lostRVModal.getItemdesc());
-        editlostitem.setOnClickListener(new View.OnClickListener() {
+        lostitemnameTV.setText("Lost Item: "+lostRVModal.getItemname());
+        losernameTV.setText("Owner's Name: "+lostRVModal.getLosername());
+        loserphoneTV.setText("PhNo.: "+lostRVModal.getLoserphone());
+        loseremailTV.setText("E-mail: "+lostRVModal.getLoseremail());
+        lostitemlocTV.setText("Date/Location: "+lostRVModal.getItemloc());
+        lostitemdescTV.setText("Description: "+lostRVModal.getItemdesc());
+        dellostitem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent i=new Intent(LostActivity.this,EditLostItem.class);
-               i.putExtra("lostitems",lostRVModal);
-               startActivity(i);
+                deleteItem();
+
             }
         });
         losercontact.setOnClickListener(new View.OnClickListener() {
@@ -138,6 +144,13 @@ public class LostActivity extends AppCompatActivity implements LostRVAdapter.Los
                 sendmail();
             }
         });
+
+    }
+
+    private void deleteItem() {
+        //on below line calling a method to delete the course.
+        databaseReference.removeValue();
+        Toast.makeText(this, "Item Deleted", Toast.LENGTH_SHORT).show();
 
     }
 

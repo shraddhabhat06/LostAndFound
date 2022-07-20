@@ -14,12 +14,12 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Lost Item:"
+        android:text="Found Item:"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/idTVLoserName"
+        android:id="@+id/idTVFinderName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/idTVItemName"
@@ -28,57 +28,78 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Owner's Name:"
+        android:text="Finder's Name:"
         android:textColor="@color/white"
         android:textSize="16sp" />
+
     <TextView
-        android:id="@+id/idTVLoserPhone"
+        android:id="@+id/idTVFinderPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Owner Ph.No:"
-        android:layout_margin="5dp"
-        android:layout_below="@+id/idTVLoserName"
-        android:textColor="@color/white"
+        android:layout_below="@+id/idTVFinderName"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-medium"
-        android:textSize="16sp"
-        />
+        android:text="Finder Ph.No:"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
     <TextView
-        android:id="@+id/idTVLoserEmail"
+        android:id="@+id/idTVFinderEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Owner's E-mail Id:"
-        android:layout_below="@+id/idTVLoserPhone"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
+        android:layout_below="@+id/idTVFinderPhone"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-medium"
-        android:textSize="16sp"
-        />
+        android:text="Finder's E-mail Id:"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
     <TextView
         android:id="@+id/idTVItemLoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Date/Location:"
-        android:layout_below="@+id/idTVLoserEmail"
+        android:layout_below="@+id/idTVFinderEmail"
         android:layout_margin="5dp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-medium"
         android:textSize="16sp"
         />
+
     <TextView
         android:id="@+id/idTVItemDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description of Lost Item:\n"
         android:layout_below="@+id/idTVItemLoc"
-        android:layout_margin="5dp"
-        android:textColor="@color/white"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-medium"
-        android:textSize="16sp"
-        />
+        android:text="Description of Found Item:\n"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/idFoundImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/idTVItemDesc"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#989797" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/idTVItemDesc"
+        android:layout_below="@+id/idFoundImage"
         android:orientation="horizontal"
         android:weightSum="2">
         <Button
@@ -87,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Delete Lost Item"
+            android:text="Delete Found Item"
             android:textAllCaps="false" />
 
         <!--button for viewing course details-->
@@ -97,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Contact Owner"
+            android:text="Contact Finder"
             android:textAllCaps="false" />
 
 

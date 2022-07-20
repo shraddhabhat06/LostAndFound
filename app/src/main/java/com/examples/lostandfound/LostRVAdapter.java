@@ -33,11 +33,12 @@ public class LostRVAdapter extends RecyclerView.Adapter<LostRVAdapter.ViewHolder
         return new ViewHolder(view);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull LostRVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull LostRVAdapter.ViewHolder holder,int position) {
         LostRVModal lostRVModal=lostRVModalArrayList.get(position);
-        holder.lost_item_nametv.setText(lostRVModal.getItemname());
-        holder.lost_item_loctv.setText(lostRVModal.getItemloc());
+        holder.lost_item_nametv.setText("Lost Item: "+lostRVModal.getItemname());
+        holder.lost_item_loctv.setText("Date/Location: "+lostRVModal.getItemloc());
         setAnimation(holder.itemView,position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,20 +8,23 @@
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/drawable/progress_back.xml" value="0.179" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/drawable/rounded_drawable.xml" value="0.2175" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_add_found_item.xml" value="0.25" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_add_lost_item.xml" value="0.25" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_add_found_item.xml" value="0.2" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_add_lost_item.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_choice.xml" value="0.25" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_edit_lost.xml" value="0.25" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_edit_lost_item.xml" value="0.25" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_found.xml" value="0.25" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_found.xml" value="0.176" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_found_rvmodal.xml" value="0.2359375" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_lost.xml" value="0.25" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_lost.xml" value="0.2" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_lost_rvmodal.xml" value="0.25" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/activity_test.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.23981481481481481" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/bottom_sheet_dialog1.xml" value="0.20436083796494228" />
+        <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/found_rv_item.xml" value="0.20436083796494228" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/layout/lost_rv_item.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/menu/main_menu.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Shraddha/Desktop/LostAndFound/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2175" />

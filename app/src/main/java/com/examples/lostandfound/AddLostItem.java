@@ -30,12 +30,12 @@ public class AddLostItem extends AppCompatActivity {
     private Button add_item_btn;
     private FirebaseAuth mAuth;
     private ProgressBar loadingPB;
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
     private String lostitemid;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_lost_item);
         item_name=findViewById(R.id.idEdtItemName);
