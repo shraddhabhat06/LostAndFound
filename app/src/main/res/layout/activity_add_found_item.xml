@@ -16,6 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -26,8 +27,7 @@
                     android:text="FOUND"
                     android:textAlignment="center"
                     android:textSize="50dp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <!--edit text for course name-->
                 <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +76,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:importantForAutofill="no"
-                        android:inputType="phone"
+                        android:inputType="textImeMultiLine|textMultiLine"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textSize="14sp"
@@ -103,7 +103,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:importantForAutofill="no"
-                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:inputType="phone"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textSize="14sp" />
@@ -128,7 +128,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:importantForAutofill="no"
-                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:inputType="textEmailAddress"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textSize="14sp" />
@@ -192,8 +192,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="25dp"
-                    android:visibility="visible"
                     android:background="@color/white"
+                    android:visibility="visible"
                     tools:ignore="ImageContrastCheck" />
 
                 <!--button for adding a new course-->

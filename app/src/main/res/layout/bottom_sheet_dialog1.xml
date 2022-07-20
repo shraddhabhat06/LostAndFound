@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/idRLBSheet"
+    android:id="@+id/idRLBSheet1"
     android:background="#000000">
 
     <TextView
@@ -103,7 +103,7 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <Button
-            android:id="@+id/idBtnDelLostItem"
+            android:id="@+id/idBtnDelFoundItem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
